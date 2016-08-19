@@ -109,8 +109,12 @@ import_member
           ;
 
 task_statement
-          : TASK identifier ':' identifier '{' task_body '}'
+          : TASK identifier ':' task_type '{' task_body '}'
             {$$ = new yy.ast.TaskStatement($2, $4, $6, @$);}
+          ;
+
+task_type
+          : (identifier|member_access)
           ;
              
 task_body

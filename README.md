@@ -77,4 +77,3 @@ Apache-2.0
 [downloads-url]: https://npmjs.org/package/eric
 [eric]:https://raw.githubusercontent.com/metasansana/eric/master/assets/eric.jpg 
 [eric-types]: https://npmjs.org/package/eric-types
-

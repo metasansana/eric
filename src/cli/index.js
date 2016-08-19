@@ -73,4 +73,4 @@ addCommand('build', new CheckCommand(fs, new BuildCommand(fs))).
 addCommand('list', new CheckCommand(fs, new LoadCommand(fs, tasks, new ListCommand(tasks)))).
 addCommand('run', new CheckCommand(fs, new LoadCommand(fs, tasks, new RunCommand(tasks)))).
 execute().
-catch(e => console.error(e.stack));
+catch(e => console.error(e.stack || e));
