@@ -1,0 +1,50 @@
+import Gen from 'taino/lib/Generator';
+import Wizard from 'taino/lib/Wizard';
+
+task init:Gen {
+ context : {n:'one'}
+ file ('LICENSE', 'LICENSE')
+}
+
+task generateEndPointTests:Gen {
+
+    templatePath : process.env.TEMPLATE_PATH
+    list : [1 ,2, {}]
+    file('test/products', 'endpoint.template', {
+            "id": this.someMethod(),
+            "collection": "products",
+            "records_file": "./assets/products.json",
+            "new": {
+                "name": "Wizbang Widget",
+                "manufacturer": "Wizbang",
+                "description": "It wizzes it bangs",
+                "category": "Bangers"
+            }
+        })
+
+    file('test/products', 'endpoint.template', {
+            "id": "id",
+            "collection": this.someValue,
+            "records_file": "./assets/products.json",
+            "new": {
+                "name": "Wizbang Widget",
+                "manufacturer": "Wizbang",
+                "description": "It wizzes it bangs",
+                "category": "Bangers"
+            }
+
+    })
+
+    file('test/products', 'endpoint.template', {
+            "id": "id",
+            "collection": "products",
+            "records_file": "./assets/products.json",
+            "new": {
+                "name": "Wizbang Widget",
+                "manufacturer": "Wizbang",
+                "description": "It wizzes it bangs",
+                "category": "Bangers"
+            }
+    })
+
+}
