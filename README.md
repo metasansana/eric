@@ -74,6 +74,6 @@ Apache-2.0
 [npm-url]: https://npmjs.org/package/eric
 [downloads-image]: https://img.shields.io/npm/dm/eric.svg?style=flat
 [downloads-url]: https://npmjs.org/package/eric
-[eric]: assets/eric.jpg
+[eric]:https://raw.githubusercontent.com/metasansana/eric/master/assets/eric.jpg 
 [eric-types]: https://npmjs.org/package/eric-types
 
