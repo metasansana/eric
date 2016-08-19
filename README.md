@@ -39,6 +39,7 @@ of your file as you would in regular ES2015+ code.
 ```
 
 import <name> from <package>
+import * as <name> from <package>
 
 task <task name>:<task type> {
 
@@ -51,7 +52,7 @@ task <task name>:<task type> {
 example :
 
 ```
-import types from 'eric-types';
+import * as types from 'eric-types';
 
 task init:types.Generator {
  template: 'src/templates'
