@@ -1,6 +1,6 @@
 {
   "name": "eric",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple task runner for building things.",
   "author": "Lasana Murray <lmurray@quenk.com> (http://quenk.com)",
   "bin": {
