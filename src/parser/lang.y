@@ -105,7 +105,7 @@ import_member
             {$$ = new yy.ast.DefaultMember($1, @$);}
 
           | '*' AS identifier
-            {$$ = new yy.ast.CompositeMember('* as '+$3, @$);} 
+            {$$ = new yy.ast.DefaultMember('* as '+$3, @$);} 
           ;
 
 task_statement

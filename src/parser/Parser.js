@@ -93,7 +93,7 @@ case 3:
 this.$ = new yy.ast.DefaultMember($$[$0], this._$);
 break;
 case 4:
-this.$ = new yy.ast.CompositeMember('* as '+$$[$0], this._$);
+this.$ = new yy.ast.DefaultMember('* as '+$$[$0], this._$);
 break;
 case 5:
 this.$ = new yy.ast.TaskStatement($$[$0-5], $$[$0-3], $$[$0-1], this._$);
