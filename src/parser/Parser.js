@@ -695,6 +695,14 @@ stateStackSize:function stateStackSize() {
     },
 options: {"flex":true},
 performAction: function anonymous(yy,yy_,$avoiding_name_collisions,YY_START) {
+
+ parser.parseError = function(errStr, object) {
+     var lines = errStr.split("\n");
+     lines[0] = "SyntaxError at: " + (object.loc.first_column + 1);
+     throw new SyntaxError(lines.join("\n"));
+ };
+
+
 var YYSTATE=YY_START;
 switch($avoiding_name_collisions) {
 case 0:return;

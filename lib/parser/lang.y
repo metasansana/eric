@@ -38,6 +38,17 @@ Text ({DoubleStringCharacter}*)|({SingleStringCharacter}*)
 /* Lexer flags */
 %options flex
 %x COMMENT
+
+%{
+
+ parser.parseError = function(errStr, object) {
+     var lines = errStr.split("\n");
+     lines[0] = "SyntaxError at: " + (object.loc.first_column + 1);
+     throw new SyntaxError(lines.join("\n"));
+ };
+
+%}
+
 %%
 
 /* Lexer rules */

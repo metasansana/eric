@@ -36,6 +36,9 @@
     "mocha": "^2.5.3",
     "must": "^0.13.2"
   },
+  "peerDependencies": {
+    "eric-types": "0.0.1"
+  },
   "keywords": [
     "task"
   ],
